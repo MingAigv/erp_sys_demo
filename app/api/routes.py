@@ -9,6 +9,7 @@ from app.schemas import BatchLookup, ExportRequest, Page, Preview, LookupResult
 from app.services.queries import serialize, order_query, paginate, get_order, detail, date_bounds
 from app.services.sync import sync_mock
 from app.services.export import prepare, export_workbook
+from app.services.order_export import export_orders
 from app.services.errors import BusinessError
 
 router = APIRouter(prefix='/api/v1')
@@ -72,6 +73,26 @@ def financial_transactions(session: DB, shop_id: ShopId = None, order_id: Annota
     if date_to:
         stmt = stmt.where(FinancialTransaction.occurred_at < date_to)
     return paginate(session, stmt, page, page_size, FinancialTransaction.occurred_at.desc(), FinancialTransaction.id.desc())
+
+XLSX_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+XLSX_RESPONSES = {200: {'description': '下载 Excel 文件', 'content': {XLSX_TYPE: {'schema': {'type': 'string', 'format': 'binary'}}}}}
+
+
+@router.get('/exports/orders', response_class=Response, responses=XLSX_RESPONSES,
+            summary='导出全部订单及明细（无需模板）')
+def export_all_orders(session: DB):
+    payload = export_orders(session)
+    return Response(payload, media_type=XLSX_TYPE,
+                    headers={'Content-Disposition': 'attachment; filename="all-orders.xlsx"'})
+
+
+@router.post('/exports/orders', response_class=Response, responses=XLSX_RESPONSES,
+             summary='按订单 ID 导出订单及明细（无需模板）')
+def export_selected_orders(body: ExportRequest, session: DB):
+    payload = export_orders(session, body.order_ids)
+    return Response(payload, media_type=XLSX_TYPE,
+                    headers={'Content-Disposition': 'attachment; filename="selected-orders.xlsx"'})
+
 
 @router.post('/exports/postpony/preview', response_model=Preview)
 def preview(body: ExportRequest, request: Request, session: DB):

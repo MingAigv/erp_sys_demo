@@ -1,5 +1,18 @@
 # 实际验证记录
 
+## 2026-09-29：普通订单 Excel 导出
+
+- 新增 `GET /api/v1/exports/orders` 全量导出和 `POST /api/v1/exports/orders` 指定 ID 导出；不依赖模板，原有 PostPony 接口保留。
+- `python -m compileall -q app tests` 与 `git diff --check` 通过。
+- 固定数据／SQLite portable 测试：10 项通过。
+- 使用现有 bundled Python 的 openpyxl 执行 `python -m unittest discover -s tests -p '*workbook_portable.py' -v`：8 项通过，其中新增 5 项普通导出生产写出代码测试，原有 3 项 PostPony 写出测试。
+- 新增测试实际将 XLSX 写入内存并回读，检查前导零、长物流号、公式形式文本、普通数值与超精度金额、UTC 日期、缺失值、空表、文本校验、Excel 行数上限及连续导出隔离。
+- `tests/test_order_export.py` 已补充 HTTP 集成测试，覆盖全量记录数、无模板导出、指定 ID 及关系过滤、重复 ID、不存在 ID、非法请求、空库、金额和币种、错误定位、原接口回归、Swagger 下载声明。
+- 本次环境缺 FastAPI、SQLAlchemy、Alembic、pytest 等依赖；安装依赖的权限请求被拒绝。实际运行 `.venv/Scripts/python.exe -m pytest -q` 返回 `No module named pytest`，因此未验证 HTTP 集成测试，不宣称完整测试通过。
+- 在依赖完整的服务器上执行 `python -m pytest -q` 后，再通过 `/docs` 下载全量及指定 ID 文件完成接口验收。
+
+## 初始版本验证
+
 验证日期：2026-09-28。环境：Windows PowerShell，系统 Python 3.13.5。
 
 ## 已执行

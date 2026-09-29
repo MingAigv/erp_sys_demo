@@ -74,6 +74,48 @@ Swagger：<http://127.0.0.1:8000/docs>。OpenAPI：<http://127.0.0.1:8000/openap
 
 启动只建立配置和连接工厂，不创建表、不同步、不清空数据库。第一次请求未迁移数据库会返回明确的数据库错误。`/api/v1/health` 同时检查数据库连接和 Alembic 版本记录。
 
+## 普通 Excel 导出（无需模板）
+
+普通导出用于内部查看、统计，支持多商品、多包裹、非 USD 和缺少发货必填字段的订单。
+它不受 PostPony 的模板及必填校验限制，也不连接 Etsy 获取最新订单。
+原有 `/api/v1/exports/postpony/preview` 和 `/api/v1/exports/postpony` 保持原有行为。
+
+| 接口 | 用途 | 请求 |
+| --- | --- | --- |
+| `GET /api/v1/exports/orders` | 导出数据库中全部订单及明细，无分页限制 | 无请求体 |
+| `POST /api/v1/exports/orders` | 按数据库订单 ID 导出 | `{"order_ids":[1,2,3]}` |
+
+指定 ID 时最多 500 项、重复 ID 去重；空列表、非整数、非正整数和未知参数返回 422。
+有不存在的 ID 时整批返回 `ORDERS_NOT_FOUND`，不悄悄忽略。全部导出必须使用 GET 接口，空请求不代表全部。
+空数据库也会生成带表头的工作簿。各表按数据库 ID 稳定排序。
+
+工作簿包含：**订单、商品、包裹、装箱明细、财务流水、店铺、导出说明**。
+每种实体一条记录一行，保留所有数据库字段，以 ID 关联，避免多商品和多包裹导致金额重复。
+全量导出包含全部店铺，以及没有关联订单的店铺费用、提现；按 ID 导出仅包含所选订单的关联流水和所属店铺。
+金额必须按币种分别统计，提现不算订单收入。缺失值为空，不自动补齐。
+订单号、物流单号、邮编等保持文本，公式形式的文本不会作为公式执行；时间为含 UTC 时区的文本。
+正常金额、重量和数量是数值；超过 Excel 安全精度的值以文本保存，避免丢失精度。
+超长或不支持的文本返回 `INVALID_EXPORT_TEXT` 并定位字段，不截断；单表超出 Excel 行数上限返回 `EXPORT_TOO_LARGE`。
+当前在内存中构建工作簿，适合演示和小规模内部使用，大数据量应按 ID 分批导出。
+
+在 Swagger `/docs` 中找到上述接口，点击 **Try it out → Execute → Download file**。
+也可以直接访问 `/api/v1/exports/orders` 下载全部数据。
+
+Linux 服务器上执行（文件保存在服务器当前目录）：
+
+```bash
+# 全部订单；无需 PostPony 模板
+curl --fail-with-body 'http://127.0.0.1:8000/api/v1/exports/orders' -o all-orders.xlsx
+
+# 指定订单，包括多商品和多包裹的订单
+curl --fail-with-body -X POST 'http://127.0.0.1:8000/api/v1/exports/orders' \
+  -H 'Content-Type: application/json' \
+  -d '{"order_ids":[1,2,3]}' -o selected-orders.xlsx
+```
+
+curl 报错时输出文件可能是 JSON 错误，不应当作 XLSX 使用。
+更新代码后需重启 Uvicorn 才能看到新接口，无需新增迁移或重新导入模拟数据。
+
 ## HTTP 闭环
 
 另开 PowerShell，在项目目录执行：
