@@ -1,5 +1,14 @@
 # 实际验证记录
 
+## 2026-09-29：中文管理界面
+
+- 首页由 FastAPI 提供，静态资源位于 `app/static/`，无外部前端依赖和构建步骤；`/docs` 和现有 API 保留。
+- 新增订单筛选、分页、跨页选择、详情、批量匹配、全量／已选／单订单普通 Excel 导出、PostPony 预览与下载、财务流水和同步记录。
+- `node --check app/static/app.mjs`、`node --check app/static/utils.mjs`、Python 编译与 `git diff --check` 通过。
+- `node --test tests/frontend.test.mjs` 因创建子进程时 `EPERM` 失败，权限提升被拒绝；改用不创建子进程的 `node tests/frontend.test.mjs`，6 项前端纯逻辑测试全部通过。覆盖 HTML 转义、前导零、日期时区与结束日、批量匹配限额、跨页选择限额及错误消息。
+- 新增 `tests/test_frontend.py` 验证首页／资源、API 共存、工作目录独立性以及未初始化数据库时首页可访问；本地 `.venv` 仍缺 pytest 及后端依赖，执行完整 pytest 返回 `No module named pytest`，因此这些 HTTP 测试未运行。
+- 浏览器工具访问本地预览地址的请求被权限策略拒绝，未进行实际浏览器点击、响应式截图或下载验收；不把纯逻辑测试当作端到端通过。上线前请按 README 的手工验收流程检查。
+
 ## 2026-09-29：普通订单 Excel 导出
 
 - 新增 `GET /api/v1/exports/orders` 全量导出和 `POST /api/v1/exports/orders` 指定 ID 导出；不依赖模板，原有 PostPony 接口保留。

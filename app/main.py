@@ -1,7 +1,9 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException
 from sqlalchemy.exc import SQLAlchemyError
 from app.config import Settings
@@ -21,6 +23,16 @@ def create_app(settings=None):
     app = FastAPI(title='Etsy 本地订单管理（固定模拟数据）', version='1.0.0', lifespan=lifespan)
     app.state.settings, app.state.engine, app.state.sessions = settings, engine, session_factory(engine)
     app.include_router(router)
+    static_dir = Path(__file__).resolve().parent / 'static'
+    app.mount('/static', StaticFiles(directory=static_dir), name='static')
+
+    @app.get('/', include_in_schema=False)
+    def home():
+        return FileResponse(static_dir / 'index.html', headers={'Cache-Control': 'no-cache'})
+
+    @app.get('/favicon.ico', include_in_schema=False)
+    def favicon():
+        return FileResponse(static_dir / 'favicon.svg', media_type='image/svg+xml')
 
     @app.exception_handler(BusinessError)
     async def business_error(request, exc):

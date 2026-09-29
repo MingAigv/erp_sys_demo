@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Etsy 订单工作台</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <script type="module" src="/static/app.mjs"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/"><span class="brand-symbol">E</span><span>Etsy 工作台<small>ORDER MANAGEMENT</small></span></a>
+  <div class="workspace-label">工作空间</div>
+  <nav aria-label="主导航">
+    <button class="nav-item active" data-view="orders"><span aria-hidden="true">▦</span>订单管理<span class="nav-arrow">›</span></button>
+    <button class="nav-item" data-view="finance"><span aria-hidden="true">≋</span>财务流水</button>
+    <button class="nav-item" data-view="sync"><span aria-hidden="true">↻</span>同步记录</button>
+  </nav>
+  <div class="sidebar-note"><span class="eyebrow">本地数据 · 随时可查</span><p>订单、物流与财务，<br>在一个工作台整理。</p><a href="/docs" target="_blank" rel="noopener">接口文档 ↗</a></div>
+  <div class="sidebar-footer"><span class="avatar">M</span><div>演示工作空间<small>固定模拟数据</small></div></div>
+</aside>
+<main>
+  <header class="topbar"><div>工作空间 <span>/</span> <strong id="breadcrumb">订单管理</strong></div><span id="health" class="connection">连接中…</span></header>
+  <div class="content">
+    <div class="page-heading"><div><div class="eyebrow">ETSY / LOCAL WORKSPACE</div><h1 id="page-title">订单管理</h1><p id="page-description">从查询到导出，让每一笔订单清晰有序。</p></div><button id="sync-button" class="button primary">↻ 同步模拟数据</button></div>
+    <div class="notice"><span class="notice-icon">i</span><div><strong>当前使用模拟数据</strong><span>同步仅导入项目中的固定数据，不连接 Etsy 店铺，也不获取最新销售数据。</span></div></div>
+    <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+    <section id="orders-view" class="view">
+      <div class="stats"><article><span>当前匹配订单</span><strong id="order-count">—</strong><small>按下方查询条件统计</small></article><article><span>已加载店铺</span><strong id="shop-count">—</strong><small>所有店铺统一管理</small></article><article><span>已选订单</span><strong id="selection-count">0</strong><small>支持跨页勾选，最多 500 单</small></article><article class="stat-accent"><span>普通 Excel 导出</span><strong class="stat-word">完整明细 <span>↗</span></strong><small>多商品、多包裹 · 无需模板</small></article></div>
+      <section class="panel">
+        <div class="panel-heading"><h2>订单查询</h2><button id="batch-open" class="text-button">批量匹配订单 / 物流号 ↗</button></div>
+        <form id="order-filter" class="filter-grid">
+          <label>店铺<select name="shop_id" class="shop-select"><option value="">全部店铺</option></select></label>
+          <label>订单号<input name="order_number" placeholder="输入完整订单号" maxlength="256"></label>
+          <label>物流单号<input name="tracking_number" placeholder="输入完整物流单号" maxlength="256"></label>
+          <label>商品 SKU<input name="sku" placeholder="输入完整 SKU" maxlength="256"></label>
+          <label>订单状态<select name="status"><option value="">全部状态</option><option value="shipped">已发货</option><option value="paid">已付款</option><option value="unshipped">未发货</option><option value="refunded">已退款</option><option value="cancelled">已取消</option></select></label>
+          <label>开始日期<input name="date_from" type="date"></label><label>结束日期（含当天）<input name="date_to" type="date"></label>
+          <div class="filter-actions"><button type="reset" class="button">重置</button><button type="submit" class="button primary">查询订单</button></div>
+        </form>
+      </section>
+      <section class="panel list-panel">
+        <div class="panel-heading list-heading"><div><h2>订单列表 <span id="list-total" class="count-badge">—</span></h2><p class="muted">点击订单号查看商品、包裹和收支明细</p></div><div class="actions"><button id="clear-selection" class="text-button" disabled>清空选择</button><button id="postpony-open" class="button" disabled>PostPony 导出</button><button id="export-selected" class="button" disabled>导出已选 <span id="selected-label">0</span></button><button id="export-all" class="button primary">↓ 全部导出</button></div></div>
+        <div class="scope-note">“全部导出”包含数据库全部订单，不受当前筛选条件影响；“导出已选”仅包含勾选的订单。</div>
+        <div class="table-wrap"><table><thead><tr><th class="check-col"><input id="select-page" type="checkbox" aria-label="选择本页全部订单" disabled></th><th>订单 / 店铺</th><th>收件人</th><th>状态</th><th>订单金额</th><th>下单时间</th><th>操作</th></tr></thead><tbody id="order-rows"><tr><td colspan="7" class="empty">正在加载订单…</td></tr></tbody></table></div>
+        <div class="pagination"><span id="order-page-info">—</span><div><label>每页 <select id="page-size"><option>20</option><option>50</option><option>100</option></select></label><button id="order-prev" class="button" disabled>上一页</button><span id="order-page-label">1 / 1</span><button id="order-next" class="button" disabled>下一页</button></div></div>
+      </section>
+    </section>
+    <section id="finance-view" class="view" hidden>
+      <section class="panel"><div class="panel-heading"><h2>筛选财务流水</h2><span class="muted">保留原币种，不分摊店铺费用</span></div><form id="finance-filter" class="filter-grid">
+        <label>店铺<select name="shop_id" class="shop-select"><option value="">全部店铺</option></select></label><label>流水类型<select name="type"><option value="">全部类型</option><option value="payment">收款</option><option value="refund">退款</option><option value="fee">费用</option><option value="adjustment">调整</option><option value="payout">提现</option></select></label><label>订单数据库 ID<input name="order_id" type="number" min="1" step="1" placeholder="例如 1"></label><label>币种<input name="currency" placeholder="例如 USD" maxlength="10"></label><label>开始日期<input name="date_from" type="date"></label><label>结束日期（含当天）<input name="date_to" type="date"></label><div class="filter-actions"><button type="reset" class="button">重置</button><button class="button primary" type="submit">查询流水</button></div>
+      </form></section>
+      <section class="panel list-panel"><div class="panel-heading"><h2>财务流水</h2><span class="muted">提现不计入订单净收款</span></div><div class="table-wrap"><table><thead><tr><th>流水号</th><th>店铺 / 订单 ID</th><th>类型</th><th>金额</th><th>发生时间</th><th>说明</th></tr></thead><tbody id="finance-rows"></tbody></table></div><div class="pagination"><span id="finance-page-info">—</span><div><button id="finance-prev" class="button">上一页</button><span id="finance-page-label">1 / 1</span><button id="finance-next" class="button">下一页</button></div></div></section>
+    </section>
+    <section id="sync-view" class="view" hidden><section class="panel list-panel"><div class="panel-heading"><div><h2>数据同步记录</h2><p class="muted">重复同步会更新已有数据，不会重复新增同一订单。</p></div><button id="sync-refresh" class="button">刷新记录</button></div><div class="table-wrap"><table><thead><tr><th>批次 ID</th><th>状态</th><th>开始时间</th><th>新增</th><th>更新</th><th>未变化</th><th>失败</th><th>错误说明</th></tr></thead><tbody id="sync-rows"></tbody></table></div><div class="pagination"><span id="sync-page-info">—</span><div><button id="sync-prev" class="button">上一页</button><span id="sync-page-label">1 / 1</span><button id="sync-next" class="button">下一页</button></div></div></section></section>
+    <footer class="page-footer"><span>Etsy 本地订单管理</span><span>数据保存在当前服务器 · 普通导出无需模板</span></footer>
+  </div>
+</main>
+<dialog id="detail-dialog" class="wide-dialog" aria-labelledby="detail-title"><div class="dialog-heading"><div><span class="eyebrow">ORDER DETAILS</span><h2 id="detail-title">订单详情</h2></div><button class="icon-button" data-close="detail-dialog" aria-label="关闭订单详情">×</button></div><div id="detail-content"></div></dialog>
+<dialog id="batch-dialog" aria-labelledby="batch-title"><div class="dialog-heading"><h2 id="batch-title">批量匹配</h2><button class="icon-button" data-close="batch-dialog" aria-label="关闭批量匹配">×</button></div><form id="batch-form"><div class="two-columns"><label>匹配方式<select name="lookup_type"><option value="order_number">订单号</option><option value="tracking_number">物流单号</option></select></label><label>店铺<select name="shop_id" class="shop-select"><option value="">全部店铺</option></select></label></div><label>每行一个编号，最多 500 个<textarea name="values" rows="8" placeholder="0001001&#10;0001005" required></textarea></label><p class="muted">保留前导零。同号匹配到多条订单时会全部显示，供你逐一选择。</p><button type="submit" class="button primary">开始匹配</button></form><div id="batch-result" aria-live="polite"></div></dialog>
+<dialog id="postpony-dialog" aria-labelledby="postpony-title"><div class="dialog-heading"><h2 id="postpony-title">PostPony 模板导出</h2><button class="icon-button" data-close="postpony-dialog" aria-label="关闭模板导出">×</button></div><p class="muted">使用当前已选订单。需要服务器上的原始模板；多商品、多包裹或缺必填项可能无法通过校验。</p><div id="postpony-result" aria-live="polite"></div><div class="dialog-actions"><button id="postpony-check" class="button">重新预览</button><button id="postpony-download" class="button primary" disabled>下载 PostPony 文件</button></div></dialog>
+</body>
+</html>
