@@ -1,0 +1,4679 @@
+{
+  "shops": [
+    {
+      "platform_shop_id": "MOCK-SHOP-1",
+      "name": "Mock Cedar Studio",
+      "is_mock": true,
+      "source": "mock"
+    },
+    {
+      "platform_shop_id": "MOCK-SHOP-2",
+      "name": "Mock Birch Studio",
+      "is_mock": true,
+      "source": "mock"
+    }
+  ],
+  "orders": [
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001001",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-01T12:00:00+00:00",
+      "platform_updated_at": "2026-01-01T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 01",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "101 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-1-1",
+          "title": "Mock ceramic ornament 1",
+          "sku": "000SKU-001",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-001-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "00001234567890123456789012345678901234567890",
+          "shipping_date": "2026-01-01",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels1@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-1-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-001",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-01T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-001",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-01T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001002",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "30.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "37.00",
+      "ordered_at": "2026-01-02T12:00:00+00:00",
+      "platform_updated_at": "2026-01-02T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 02",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "102 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-2-1",
+          "title": "Mock ceramic ornament 2",
+          "sku": "SKU-COMMON",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "platform_item_id": "ITEM-2-2",
+          "title": "Mock linen pouch",
+          "sku": "SKU-COMMON",
+          "quantity": 1,
+          "unit_price": "10.00",
+          "unit_weight": "0.100",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-002-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "SHARED-TRACKING",
+          "shipping_date": "2026-01-02",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels2@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-2-1",
+              "quantity": 1,
+              "is_mock": true
+            },
+            {
+              "item": "ITEM-2-2",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-002",
+          "type": "payment",
+          "amount": "37.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-02T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-002",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-02T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001003",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "40.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "47.00",
+      "ordered_at": "2026-01-03T12:00:00+00:00",
+      "platform_updated_at": "2026-01-03T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 03",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "103 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-3-1",
+          "title": "Mock ceramic ornament 3",
+          "sku": "SKU-COMMON",
+          "quantity": 2,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-003-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "SHARED-TRACKING",
+          "shipping_date": "2026-01-03",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels3@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-3-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "package_reference": "MOCK-PKG-003-2",
+          "carrier": "MockCarrier",
+          "tracking_number": "SHARED-TRACKING",
+          "shipping_date": "2026-01-03",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels3@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-3-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-003",
+          "type": "payment",
+          "amount": "47.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-03T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-003",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-03T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001004",
+      "status": "unshipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-04T12:00:00+00:00",
+      "platform_updated_at": "2026-01-04T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 04",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "104 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-4-1",
+          "title": "Mock ceramic ornament 4",
+          "sku": "000SKU-004",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-004-1",
+          "carrier": "MockCarrier",
+          "tracking_number": null,
+          "shipping_date": null,
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels4@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-4-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-004",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-04T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-004",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-04T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001005",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-05T12:00:00+00:00",
+      "platform_updated_at": "2026-01-05T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 05",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "105 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-5-1",
+          "title": "Mock ceramic ornament 5",
+          "sku": "000SKU-005",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-005-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-005-1",
+          "shipping_date": "2026-01-05",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels5@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-5-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-005",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-05T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-005",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-05T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "REFUND-005",
+          "type": "refund",
+          "amount": "-5.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-05T12:00:00+00:00",
+          "description": "Mock partial refund",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001006",
+      "status": "refunded",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-06T12:00:00+00:00",
+      "platform_updated_at": "2026-01-06T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 06",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "106 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-6-1",
+          "title": "Mock ceramic ornament 6",
+          "sku": "000SKU-006",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-006-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-006-1",
+          "shipping_date": "2026-01-06",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels6@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-6-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-006",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-06T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-006",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-06T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "REFUND-006",
+          "type": "refund",
+          "amount": "-27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-06T12:00:00+00:00",
+          "description": "Mock full refund",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001007",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-07T12:00:00+00:00",
+      "platform_updated_at": "2026-01-07T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 07",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "107 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": null,
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-7-1",
+          "title": "Mock ceramic ornament 7",
+          "sku": "000SKU-007",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-007-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-007-1",
+          "shipping_date": "2026-01-07",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels7@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-7-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-007",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-07T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-007",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-07T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001008",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-08T12:00:00+00:00",
+      "platform_updated_at": "2026-01-08T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 08",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": null,
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-8-1",
+          "title": "Mock ceramic ornament 8",
+          "sku": "000SKU-008",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-008-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-008-1",
+          "shipping_date": "2026-01-08",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels8@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-8-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-008",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-08T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-008",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-08T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001009",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-09T12:00:00+00:00",
+      "platform_updated_at": "2026-01-09T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 09",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "109 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-9-1",
+          "title": "Mock ceramic ornament 9",
+          "sku": "000SKU-009",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-009-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-009-1",
+          "shipping_date": "2026-01-09",
+          "weight": null,
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels9@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-9-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-009",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-09T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-009",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-09T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001010",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-10T12:00:00+00:00",
+      "platform_updated_at": "2026-01-10T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 10",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "110 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-10-1",
+          "title": "Mock ceramic ornament 10",
+          "sku": "000SKU-010",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-010-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-010-1",
+          "shipping_date": "2026-01-10",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels10@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-10-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-010",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-10T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-010",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-10T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001011",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-11T12:00:00+00:00",
+      "platform_updated_at": "2026-01-11T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 11",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "111 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-11-1",
+          "title": "Mock ceramic ornament 11",
+          "sku": "000SKU-011",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-011-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-011-1",
+          "shipping_date": "2026-01-11",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels11@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-11-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-011",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-11T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-011",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-11T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001012",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-12T12:00:00+00:00",
+      "platform_updated_at": "2026-01-12T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 12",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "112 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-12-1",
+          "title": "Mock ceramic ornament 12",
+          "sku": "000SKU-012",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-012-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-012-1",
+          "shipping_date": "2026-01-12",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels12@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-12-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-012",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-12T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-012",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-12T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001013",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-13T12:00:00+00:00",
+      "platform_updated_at": "2026-01-13T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 13",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "113 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-13-1",
+          "title": "Mock ceramic ornament 13",
+          "sku": "000SKU-013",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-013-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-013-1",
+          "shipping_date": "2026-01-13",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels13@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-13-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-013",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-13T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-013",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-13T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001014",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-14T12:00:00+00:00",
+      "platform_updated_at": "2026-01-14T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 14",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "114 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-14-1",
+          "title": "Mock ceramic ornament 14",
+          "sku": "000SKU-014",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-014-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-014-1",
+          "shipping_date": "2026-01-14",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels14@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-14-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-014",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-14T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-014",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-14T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001015",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-15T12:00:00+00:00",
+      "platform_updated_at": "2026-01-15T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 15",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "115 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-15-1",
+          "title": "Mock ceramic ornament 15",
+          "sku": "000SKU-015",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-015-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-015-1",
+          "shipping_date": "2026-01-15",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels15@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-15-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-015",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-15T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-015",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-15T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001016",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-16T12:00:00+00:00",
+      "platform_updated_at": "2026-01-16T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 16",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "116 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-16-1",
+          "title": "Mock ceramic ornament 16",
+          "sku": "000SKU-016",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-016-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-016-1",
+          "shipping_date": "2026-01-16",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels16@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-16-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-016",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-16T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-016",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-16T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001017",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-17T12:00:00+00:00",
+      "platform_updated_at": "2026-01-17T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 17",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "117 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-17-1",
+          "title": "Mock ceramic ornament 17",
+          "sku": "000SKU-017",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-017-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-017-1",
+          "shipping_date": "2026-01-17",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels17@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-17-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-017",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-17T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-017",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-17T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001018",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-18T12:00:00+00:00",
+      "platform_updated_at": "2026-01-18T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 18",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "118 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-18-1",
+          "title": "Mock ceramic ornament 18",
+          "sku": "000SKU-018",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-018-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-018-1",
+          "shipping_date": "2026-01-18",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels18@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-18-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-018",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-18T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-018",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-18T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001019",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-19T12:00:00+00:00",
+      "platform_updated_at": "2026-01-19T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 19",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "119 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-19-1",
+          "title": "Mock ceramic ornament 19",
+          "sku": "000SKU-019",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-019-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-019-1",
+          "shipping_date": "2026-01-19",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels19@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-19-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-019",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-19T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-019",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-19T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001020",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-20T12:00:00+00:00",
+      "platform_updated_at": "2026-01-20T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 20",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "120 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-20-1",
+          "title": "Mock ceramic ornament 20",
+          "sku": "000SKU-020",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-020-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-020-1",
+          "shipping_date": "2026-01-20",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels20@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-20-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-020",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-20T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-020",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-20T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001021",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-21T12:00:00+00:00",
+      "platform_updated_at": "2026-01-21T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 21",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "121 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-21-1",
+          "title": "Mock ceramic ornament 21",
+          "sku": "000SKU-021",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-021-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-021-1",
+          "shipping_date": "2026-01-21",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels21@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-21-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-021",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-21T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-021",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-21T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001022",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-22T12:00:00+00:00",
+      "platform_updated_at": "2026-01-22T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 22",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "122 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-22-1",
+          "title": "Mock ceramic ornament 22",
+          "sku": "000SKU-022",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-022-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-022-1",
+          "shipping_date": "2026-01-22",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels22@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-22-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-022",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-22T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-022",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-22T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001023",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-23T12:00:00+00:00",
+      "platform_updated_at": "2026-01-23T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 23",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "123 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-23-1",
+          "title": "Mock ceramic ornament 23",
+          "sku": "000SKU-023",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-023-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-023-1",
+          "shipping_date": "2026-01-23",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels23@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-23-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-023",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-23T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-023",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-23T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001024",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-24T12:00:00+00:00",
+      "platform_updated_at": "2026-01-24T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 24",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "124 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-24-1",
+          "title": "Mock ceramic ornament 24",
+          "sku": "000SKU-024",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-024-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-024-1",
+          "shipping_date": "2026-01-24",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels24@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-24-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-024",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-24T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-024",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-24T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "platform_order_id": "0001025",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-25T12:00:00+00:00",
+      "platform_updated_at": "2026-01-25T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 25",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "125 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-25-1",
+          "title": "Mock ceramic ornament 25",
+          "sku": "000SKU-025",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-025-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-025-1",
+          "shipping_date": "2026-01-25",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels25@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-25-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-025",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-25T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-025",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-25T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001001",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-26T12:00:00+00:00",
+      "platform_updated_at": "2026-01-26T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 26",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "126 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-26-1",
+          "title": "Mock ceramic ornament 26",
+          "sku": "000SKU-026",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-026-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-026-1",
+          "shipping_date": "2026-01-26",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels26@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-26-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-026",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-26T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-026",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-26T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001027",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-27T12:00:00+00:00",
+      "platform_updated_at": "2026-01-27T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 27",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "127 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-27-1",
+          "title": "Mock ceramic ornament 27",
+          "sku": "000SKU-027",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-027-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-027-1",
+          "shipping_date": "2026-01-27",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels27@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-27-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-027",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-27T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-027",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-27T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001028",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-28T12:00:00+00:00",
+      "platform_updated_at": "2026-01-28T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 28",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "128 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-28-1",
+          "title": "Mock ceramic ornament 28",
+          "sku": "000SKU-028",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-028-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-028-1",
+          "shipping_date": "2026-01-28",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels28@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-28-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-028",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-28T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-028",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-28T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001029",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-29T12:00:00+00:00",
+      "platform_updated_at": "2026-01-29T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 29",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "129 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-29-1",
+          "title": "Mock ceramic ornament 29",
+          "sku": "000SKU-029",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-029-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-029-1",
+          "shipping_date": "2026-01-29",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels29@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-29-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-029",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-29T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-029",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-29T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001030",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-30T12:00:00+00:00",
+      "platform_updated_at": "2026-01-30T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 30",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "130 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-30-1",
+          "title": "Mock ceramic ornament 30",
+          "sku": "000SKU-030",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-030-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-030-1",
+          "shipping_date": "2026-01-30",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels30@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-30-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-030",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-30T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-030",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-30T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001031",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-01-31T12:00:00+00:00",
+      "platform_updated_at": "2026-01-31T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 31",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "131 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-31-1",
+          "title": "Mock ceramic ornament 31",
+          "sku": "000SKU-031",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-031-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-031-1",
+          "shipping_date": "2026-01-31",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels31@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-31-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-031",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-31T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-031",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-01-31T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001032",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-01T12:00:00+00:00",
+      "platform_updated_at": "2026-02-01T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 32",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "132 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-32-1",
+          "title": "Mock ceramic ornament 32",
+          "sku": "000SKU-032",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-032-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-032-1",
+          "shipping_date": "2026-02-01",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels32@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-32-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-032",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-01T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-032",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-01T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001033",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-02T12:00:00+00:00",
+      "platform_updated_at": "2026-02-02T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 33",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "133 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-33-1",
+          "title": "Mock ceramic ornament 33",
+          "sku": "000SKU-033",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-033-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-033-1",
+          "shipping_date": "2026-02-02",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels33@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-33-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-033",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-02T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-033",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-02T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001034",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-03T12:00:00+00:00",
+      "platform_updated_at": "2026-02-03T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 34",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "134 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-34-1",
+          "title": "Mock ceramic ornament 34",
+          "sku": "000SKU-034",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-034-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-034-1",
+          "shipping_date": "2026-02-03",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels34@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-34-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-034",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-03T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-034",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-03T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001035",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-04T12:00:00+00:00",
+      "platform_updated_at": "2026-02-04T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 35",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "135 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-35-1",
+          "title": "Mock ceramic ornament 35",
+          "sku": "000SKU-035",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-035-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-035-1",
+          "shipping_date": "2026-02-04",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels35@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-35-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-035",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-04T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-035",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-04T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001036",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-05T12:00:00+00:00",
+      "platform_updated_at": "2026-02-05T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 36",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "136 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-36-1",
+          "title": "Mock ceramic ornament 36",
+          "sku": "000SKU-036",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-036-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-036-1",
+          "shipping_date": "2026-02-05",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels36@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-36-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-036",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-05T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-036",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-05T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001037",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-06T12:00:00+00:00",
+      "platform_updated_at": "2026-02-06T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 37",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "137 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-37-1",
+          "title": "Mock ceramic ornament 37",
+          "sku": "000SKU-037",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-037-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-037-1",
+          "shipping_date": "2026-02-06",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels37@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-37-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-037",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-06T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-037",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-06T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001038",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-07T12:00:00+00:00",
+      "platform_updated_at": "2026-02-07T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 38",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "138 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-38-1",
+          "title": "Mock ceramic ornament 38",
+          "sku": "000SKU-038",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-038-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-038-1",
+          "shipping_date": "2026-02-07",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels38@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-38-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-038",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-07T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-038",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-07T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001039",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-08T12:00:00+00:00",
+      "platform_updated_at": "2026-02-08T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 39",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "139 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-39-1",
+          "title": "Mock ceramic ornament 39",
+          "sku": "000SKU-039",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-039-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-039-1",
+          "shipping_date": "2026-02-08",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels39@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-39-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-039",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-08T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-039",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-08T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001040",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-09T12:00:00+00:00",
+      "platform_updated_at": "2026-02-09T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 40",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "140 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-40-1",
+          "title": "Mock ceramic ornament 40",
+          "sku": "000SKU-040",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-040-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-040-1",
+          "shipping_date": "2026-02-09",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels40@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-40-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-040",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-09T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-040",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-09T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001041",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-10T12:00:00+00:00",
+      "platform_updated_at": "2026-02-10T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 41",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "141 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-41-1",
+          "title": "Mock ceramic ornament 41",
+          "sku": "000SKU-041",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-041-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-041-1",
+          "shipping_date": "2026-02-10",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels41@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-41-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-041",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-10T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-041",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-10T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001042",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-11T12:00:00+00:00",
+      "platform_updated_at": "2026-02-11T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 42",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "142 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-42-1",
+          "title": "Mock ceramic ornament 42",
+          "sku": "000SKU-042",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-042-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-042-1",
+          "shipping_date": "2026-02-11",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels42@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-42-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-042",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-11T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-042",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-11T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001043",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-12T12:00:00+00:00",
+      "platform_updated_at": "2026-02-12T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 43",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "143 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-43-1",
+          "title": "Mock ceramic ornament 43",
+          "sku": "000SKU-043",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-043-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-043-1",
+          "shipping_date": "2026-02-12",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels43@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-43-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-043",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-12T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-043",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-12T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001044",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-13T12:00:00+00:00",
+      "platform_updated_at": "2026-02-13T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 44",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "144 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-44-1",
+          "title": "Mock ceramic ornament 44",
+          "sku": "000SKU-044",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-044-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-044-1",
+          "shipping_date": "2026-02-13",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels44@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-44-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-044",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-13T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-044",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-13T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001045",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-14T12:00:00+00:00",
+      "platform_updated_at": "2026-02-14T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 45",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "145 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-45-1",
+          "title": "Mock ceramic ornament 45",
+          "sku": "000SKU-045",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-045-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-045-1",
+          "shipping_date": "2026-02-14",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels45@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-45-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-045",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-14T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-045",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-14T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001046",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-15T12:00:00+00:00",
+      "platform_updated_at": "2026-02-15T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 46",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "146 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-46-1",
+          "title": "Mock ceramic ornament 46",
+          "sku": "000SKU-046",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-046-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-046-1",
+          "shipping_date": "2026-02-15",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels46@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-46-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-046",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-15T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-046",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-15T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001047",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-16T12:00:00+00:00",
+      "platform_updated_at": "2026-02-16T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 47",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "147 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-47-1",
+          "title": "Mock ceramic ornament 47",
+          "sku": "000SKU-047",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-047-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-047-1",
+          "shipping_date": "2026-02-16",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels47@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-47-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-047",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-16T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-047",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-16T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001048",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-17T12:00:00+00:00",
+      "platform_updated_at": "2026-02-17T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 48",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "148 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-48-1",
+          "title": "Mock ceramic ornament 48",
+          "sku": "000SKU-048",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-048-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-048-1",
+          "shipping_date": "2026-02-17",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels48@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-48-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-048",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-17T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-048",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-17T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001049",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-18T12:00:00+00:00",
+      "platform_updated_at": "2026-02-18T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 49",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "149 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-49-1",
+          "title": "Mock ceramic ornament 49",
+          "sku": "000SKU-049",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-049-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-049-1",
+          "shipping_date": "2026-02-18",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels49@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-49-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-049",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-18T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-049",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-18T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "platform_order_id": "0001050",
+      "status": "shipped",
+      "currency": "USD",
+      "subtotal": "20.00",
+      "buyer_shipping_amount": "5.00",
+      "tax_amount": "2.00",
+      "discount_amount": "0.00",
+      "total_amount": "27.00",
+      "ordered_at": "2026-02-19T12:00:00+00:00",
+      "platform_updated_at": "2026-02-19T12:00:00+00:00",
+      "receiver_name": "Fictional Buyer 50",
+      "receiver_company": null,
+      "receiver_country": "US",
+      "receiver_address1": "150 Imaginary Lane",
+      "receiver_address2": null,
+      "receiver_city": "Fictional Town",
+      "receiver_state": "MA",
+      "receiver_zip": "01234",
+      "receiver_phone": "+1-202-555-0100",
+      "receiver_phone_ext": null,
+      "source": "mock",
+      "is_mock": true,
+      "items": [
+        {
+          "platform_item_id": "ITEM-50-1",
+          "title": "Mock ceramic ornament 50",
+          "sku": "000SKU-050",
+          "quantity": 1,
+          "unit_price": "20.00",
+          "unit_weight": "0.250",
+          "country_of_origin": "US",
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "shipments": [
+        {
+          "package_reference": "MOCK-PKG-050-1",
+          "carrier": "MockCarrier",
+          "tracking_number": "MOCKTRACK-050-1",
+          "shipping_date": "2026-02-19",
+          "weight": "0.500",
+          "length": "20.000",
+          "width": "15.000",
+          "height": "5.000",
+          "measurement_unit": "kg/cm",
+          "additional_insurance": "N",
+          "insurance_value": "0.00",
+          "shipment_purpose": "Commercial",
+          "shipping_notes": "固定模拟数据",
+          "email_label_to": "labels50@example.com",
+          "address_translation_1": null,
+          "address_translation_2": null,
+          "notes_on_invoice": null,
+          "danger_goods": "",
+          "allocations": [
+            {
+              "item": "ITEM-50-1",
+              "quantity": 1,
+              "is_mock": true
+            }
+          ],
+          "source": "mock",
+          "is_mock": true
+        }
+      ],
+      "transactions": [
+        {
+          "source_transaction_id": "PAY-050",
+          "type": "payment",
+          "amount": "27.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-19T12:00:00+00:00",
+          "description": "Mock buyer payment",
+          "source": "mock",
+          "is_mock": true
+        },
+        {
+          "source_transaction_id": "FEE-050",
+          "type": "fee",
+          "amount": "-2.00",
+          "currency": "USD",
+          "occurred_at": "2026-02-19T12:00:00+00:00",
+          "description": "Mock order fee",
+          "source": "mock",
+          "is_mock": true
+        }
+      ]
+    }
+  ],
+  "shop_transactions": [
+    {
+      "shop": "MOCK-SHOP-1",
+      "source_transaction_id": "SHOP-fee-1",
+      "type": "fee",
+      "amount": "-10.00",
+      "currency": "USD",
+      "occurred_at": "2026-02-28T12:00:00+00:00",
+      "description": "Mock shop fee; no order association",
+      "source": "mock",
+      "is_mock": true
+    },
+    {
+      "shop": "MOCK-SHOP-1",
+      "source_transaction_id": "SHOP-payout-1",
+      "type": "payout",
+      "amount": "-100.00",
+      "currency": "USD",
+      "occurred_at": "2026-02-28T12:00:00+00:00",
+      "description": "Mock shop payout; no order association",
+      "source": "mock",
+      "is_mock": true
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "source_transaction_id": "SHOP-fee-2",
+      "type": "fee",
+      "amount": "-10.00",
+      "currency": "USD",
+      "occurred_at": "2026-02-28T12:00:00+00:00",
+      "description": "Mock shop fee; no order association",
+      "source": "mock",
+      "is_mock": true
+    },
+    {
+      "shop": "MOCK-SHOP-2",
+      "source_transaction_id": "SHOP-payout-2",
+      "type": "payout",
+      "amount": "-100.00",
+      "currency": "USD",
+      "occurred_at": "2026-02-28T12:00:00+00:00",
+      "description": "Mock shop payout; no order association",
+      "source": "mock",
+      "is_mock": true
+    }
+  ]
+}

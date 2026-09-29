@@ -1,0 +1,5 @@
+{
+  "description": "独立导出拒绝测试：应用于第一条正常订单，不能用于汇率换算",
+  "currency": "EUR",
+  "is_mock": true
+}

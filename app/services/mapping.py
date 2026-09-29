@@ -1,0 +1,40 @@
+"""Declarative mapping: (literal template header, source object, attribute)."""
+MAPPING = [
+    ('OrderID', 'derived', 'export_id'),
+    ('ReceiverName', 'order', 'receiver_name'),
+    ('ReceiverCompany', 'order', 'receiver_company'),
+    ('ReceiverCountry', 'order', 'receiver_country'),
+    ('ReceiverAddress1', 'order', 'receiver_address1'),
+    ('ReceiverAddress2', 'order', 'receiver_address2'),
+    ('ReceiverCity', 'order', 'receiver_city'),
+    ('ReceiverState/Province', 'order', 'receiver_state'),
+    ('ReceiverZipCode', 'order', 'receiver_zip'),
+    ('ReceiverPhone', 'order', 'receiver_phone'),
+    ('ReceiverPhoneExt.', 'order', 'receiver_phone_ext'),
+    ('Shipping(USD)', 'order', 'buyer_shipping_amount'),
+    ('ShippingDate', 'shipment', 'shipping_date'),
+    ('AdditionalInsurance', 'shipment', 'additional_insurance'),
+    ('Weight', 'shipment', 'weight'),
+    ('Length', 'shipment', 'length'),
+    ('Width', 'shipment', 'width'),
+    ('Height', 'shipment', 'height'),
+    ('InsuranceValue', 'shipment', 'insurance_value'),
+    ('ItemName', 'item', 'title'),
+    ('ItemSKU', 'item', 'sku'),
+    ('ItemUnitPrice(USD)', 'item', 'unit_price'),
+    ('ItemQTY', 'allocation', 'quantity'),
+    ('ItemUnitWeight', 'item', 'unit_weight'),
+    ('CountryOfOrigin', 'item', 'country_of_origin'),
+    ('ShipmentPurpose', 'shipment', 'shipment_purpose'),
+    ('ShippingNotes', 'shipment', 'shipping_notes'),
+    ('EmailYourLabelTo', 'shipment', 'email_label_to'),
+    ('Address Translation 1', 'shipment', 'address_translation_1'),
+    ('Address Translation 2', 'shipment', 'address_translation_2'),
+    ('Weight Unit(Default:bls)', 'shipment', 'measurement_unit'),
+    ('Notes on Invoice', 'shipment', 'notes_on_invoice'),
+    ('DangerGoods', 'shipment', 'danger_goods'),
+]
+HEADERS = [entry[0] for entry in MAPPING]
+SHEETS = ['Import Template', 'Data table', 'Remarks']
+REQUIRED = {'OrderID', 'ReceiverName', 'ReceiverCountry', 'ReceiverAddress1', 'ReceiverCity', 'ReceiverState/Province', 'ReceiverZipCode', 'ReceiverPhone', 'ShippingDate', 'Weight', 'ItemName', 'Weight Unit(Default:bls)'}
+NUMERIC = {'Shipping(USD)', 'Weight', 'Length', 'Width', 'Height', 'InsuranceValue', 'ItemUnitPrice(USD)', 'ItemQTY', 'ItemUnitWeight'}
